@@ -21,8 +21,8 @@
         <!-- <webapp.uris>${project.basedir}/src/test/uris/uris.txt</webapp.uris> -->
         <jmeter.analysis.maven.plugin.version>1.0.6</jmeter.analysis.maven.plugin.version>
         <jmeter-maven-plugin.version>3.8.0</jmeter-maven-plugin.version>
-        <test.duration>30</test.duration>
-        <test.threads>10</test.threads>
+        <test.duration>${Duration}</test.duration>
+        <test.threads>${Threads}</test.threads>
     </properties>
 
     <profiles>
@@ -71,7 +71,9 @@
                                 <!--duration of the test in seconds-->
                                 <threadgroup00.scheduledDuration>${test.duration}</threadgroup00.scheduledDuration>
                                 <!--how long till all threads are up and running in seconds-->
-                                <threadgroup00.rampUp>1</threadgroup00.rampUp>
+                                <threadgroup00.rampUp>10</threadgroup00.rampUp>
+								<!--Number of iteratons the users will perform the transactions-->
+                                <threadgroup00.numberOfLoops>-1</threadgroup00.numberOfLoops>
                                 <!--target throughput of all threads of the group per minute-->
                                 <!-- <threadgroup00.throughput>100000000</threadgroup00.throughput> -->
                                 <!-- use uris from given file -->
@@ -80,10 +82,10 @@
                                 <server>${webapp.host}</server>
                                 <!-- <port>${webapp.port}</port> -->
                             </propertiesUser>
-							<resultsFileFormat>csv</resultsFileFormat>
-							<generateReports>true</generateReports>  
-							<ignoreResultFailures>true</ignoreResultFailures>	
-							<resultsFileNameDateFormat>dd-MM-yyyy</resultsFileNameDateFormat>
+							<ignoreResultFailures>true</ignoreResultFailures>
+						<!--	<resultsFileFormat>csv</resultsFileFormat>
+								<resultsFileNameDateFormat>dd-MM-yyyy</resultsFileNameDateFormat> -->
+							<generateReports>true</generateReports>  							
 							<resultsDirectory>${project.build.directory}/jmeter/results</resultsDirectory>							
 						</configuration>
 
