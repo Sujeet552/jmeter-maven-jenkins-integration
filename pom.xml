@@ -63,7 +63,7 @@
 						<configuration>
 							<propertiesUser>
                                 <!--A user which accesses all URLs-->
-                                <threadgroup00.name>test</threadgroup00.name>
+                                <threadgroup00.name>${threadName}</threadgroup00.name>
                                 <!--number of threads to use-->
                                 <threadgroup00.numberOfThreads>${test.threads}</threadgroup00.numberOfThreads>
                                 <!--delay of the test in seconds-->
@@ -83,7 +83,7 @@
 							<resultsFileFormat>csv</resultsFileFormat>
 							<generateReports>true</generateReports>  
 							<ignoreResultFailures>true</ignoreResultFailures>	
-							<resultsFileNameDateFormat>MMMM, yyyy</resultsFileNameDateFormat>
+							<resultsFileNameDateFormat>dd-MM-yyyy</resultsFileNameDateFormat>
 							<resultsDirectory>${project.build.directory}/jmeter/results</resultsDirectory>							
 						</configuration>
 
