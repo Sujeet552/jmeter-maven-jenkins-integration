@@ -1,4 +1,0 @@
-uri;count;total;min;average;max;standarddeviation;persecond;errors
-"ClickFishCategory";831;3633913;4368;4372;4373;0;28;0
-"HomePage";837;4535703;5419;5419;5419;0;27;0
-"HTTP Request";1668;8169616;4368;4897;5419;523;55;0
