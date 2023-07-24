@@ -1,0 +1,31 @@
+Group: JMeterDemo
+  time: 20230724T082337+0530 - 20230724T082407+0530
+  total duration:       30
+  requests:             3336
+  requests per second:  111
+  response duration (ms)
+    min:                124
+    average:            152
+    max:                1358
+    standard deviation: 89
+    quantiles (ms)
+         10%      128
+         20%      130
+         30%      131
+         40%      132
+         50%      133
+         60%      136
+         70%      140
+         80%      142
+         90%      198
+         99%      482
+       99.9%     1106
+      100.0%     1358 (max. value)
+  response size (bytes)
+    total:              16339232
+    min:                4368
+    average:            4897
+    max:                5419
+    standard deviation: 523
+  response status codes
+    200:                3336 (100%)
